@@ -1,0 +1,54 @@
+
+=================================== README ====================================
+
+
+*********** Tema 1 - Metode numerice Clustering. Algoritmul K-Means ***********
+
+
+Student: Careja Alexandru-Cristian
+Grupa: 314CD
+
+Task 1 (Citirea datelor de intrare):
+Citirea am facut-o folosind functia load cu un singur paramentru (fisierul de
+intrare) pentru numarul de clustere, iar pentru matricea de puncte am folosit 
+fucntia load cu 2 parametri (fisierul de intrare si matricea in care citesc).
+
+Task 2 (Implementarea K-Means)
+Am generat NC(numarul de clustere) numere random cu functia randperm. Punctele
+de la acei indici vor fi luati drept centroizi initiali.
+Urmatorul pas este crearea clusterelor. Pentru fiecare punct calculez distanta
+pana la fiecare centroid si adaug punctul in clusterul celui mai apropiat 
+centroid.
+Pentru fiecare cluster calculez noul centroid cat timp centroidul nou este 
+diferit de centroidul vechi. Centroidul nou se calculeaza ca centrul de
+greutate al clusterului.
+
+Task 3 (Vizualizarea rezultatului K-Means)
+Primesc ca parametrii matricea de puncte si cea de centroizi. Pentru fiecare
+punct calculez distanta pana la fiecare centroid si il adaug in cel mai 
+apropiat cluster (asemanator cu task 2, dar fac asta doar o data). Am creat
+o matrice RGB care initial este plina de zero-uri. Pentru fiecare punct, 
+verific din ce cluster face parte punctul si ii atribui o culoare in cod RGB
+pe linia din matricea RGB cu acelasi indice ca si punctul in matricea points.
+Afisarea graficului o fac cu scatter3 si cu parametrii coloanele matricei 
+points, parametrul [] care indica forma punctelor, matricea RGB si parametrul
+'filled' pentru o mai usoara vizualizare a punctelor. Am activat 3d rotation
+pentru o mai usoara verificare a graficului.
+
+Task 4 (Functie de cost)
+Functia de cost primeste ca parametrii punctele si centroizii. Am calculat, 
+pentru fiecare punct, distanta pana la cel mai apropiat centroid, iar pe
+aceasta am adaugat-o la variabila cost.
+
+Task 5 (Determinarea numarului de grupuri)
+Folosind functiile anterior implementate, am citit datele din fisier (matricea
+de puncte). Pentru NC de la 1 la 10 am calculat centroizii si costul pe care
+il retin intr-un vector linie (numit cost). Afisarea graficului: plot(cost).
+
+
+================================== FEEDBACK ===================================
+
+
+Tema te incurajeaza sa inveti singur. Multumim pentru sugestii, au fost foarte 
+bine venite.
+keep it up :)
